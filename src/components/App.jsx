@@ -68,11 +68,11 @@ function App() {
     }
   }
 
-  // const deleteContact = id => setContacts(prevState => prevState.filter(contact => contact.id !== id));
   
-  useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts));
-  })
+  
+  // useEffect(() => {
+  //   window.localStorage.setItem('contacts', JSON.stringify(contacts));
+  // })
   
       return (
         <div style={{

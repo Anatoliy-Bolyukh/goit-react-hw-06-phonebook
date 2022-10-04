@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
+
 export default function ContactForm({ handleSubmit }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
