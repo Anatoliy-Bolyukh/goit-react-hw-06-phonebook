@@ -8,19 +8,11 @@ import {createContacts} from '../redux/contactsSlice'
 
 
 function App() {
-  // const [filter, setFilter] = useState('')
-
-
-  // const [contacts, setContacts] = useState(
-  //   JSON.parse(localStorage.getItem('contacts')) ?? []
-  // );
 
   const contacts = useSelector(state => state.contacts)
   const dispatch = useDispatch()
   
-
-///------------handleSubmit-----------///
-   
+  
   const handleSubmit = event => {
     event.preventDefault()
 
@@ -49,24 +41,6 @@ function App() {
 
   }
   
-  ///-----------------------------///
-  
-  // const changeFilter = event => setFilter(event.target.value );
-
-  // const filterContact = () => {
-  //   if (filter === '') {
-  //     return contacts;
-  //   } else {
-  //     const { contacts, filter } = this.state;
-
-  //     const normalizedFilter = filter.toLowerCase();
-
-  //     return contacts.filter(contact =>
-  //       contact.name.toLowerCase().includes(normalizedFilter)
-  //     );
-  //   }
-  // }
-
       return (
         <div style={{
           display: "flex",
@@ -81,12 +55,9 @@ function App() {
           />
           <h2>Contacts</h2>
           <Filter  /> 
-          <ContactList
-            // contactsList={filterContact}
-            // deleteContact={deleteContact}
-          />
+          <ContactList/>
         </div>
       );
-}
-    // filterContact={changeFilter}
+};
+
 export default App;

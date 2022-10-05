@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { useDispatch } from 'react-redux';
 import {filterContacts} from '../../redux/filterSlice'
 
@@ -15,10 +15,6 @@ const dispatch = useDispatch()
       </label>
     </>
   );
-};
-
-Filter.propTypes = {
-  filterChange: PropTypes.func,
 };
 
 export default Filter;

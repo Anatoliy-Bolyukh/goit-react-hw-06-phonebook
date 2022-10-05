@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContacts } from '../../redux/contactsSlice'
 
@@ -8,8 +8,6 @@ const ContactList = () => {
 
   const dispatch = useDispatch();
   
-  // const handleDelete = () => dispatch(deleteContacts(contacts.id));
-
   const filterContacts = contacts.filter(el =>
     el.name.toLowerCase().includes(filter.toLowerCase())
   );
@@ -29,11 +27,6 @@ const ContactList = () => {
       </ul>
     </div>
   );
-};
-
-ContactList.propTypes = {
-  contactsList: PropTypes.func,
-  deleteContact: PropTypes.func,
 };
 
 export default ContactList;
