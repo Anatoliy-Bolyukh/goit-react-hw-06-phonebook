@@ -68,12 +68,6 @@ function App() {
     }
   }
 
-  
-  
-  // useEffect(() => {
-  //   window.localStorage.setItem('contacts', JSON.stringify(contacts));
-  // })
-  
       return (
         <div style={{
           display: "flex",
