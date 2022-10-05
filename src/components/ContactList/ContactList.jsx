@@ -8,7 +8,7 @@ const ContactList = () => {
 
   const dispatch = useDispatch();
   
-  const handleDelete = () => dispatch(deleteContacts(contacts.id));
+  // const handleDelete = () => dispatch(deleteContacts(contacts.id));
 
   const filterContacts = contacts.filter(el =>
     el.name.toLowerCase().includes(filter.toLowerCase())
@@ -22,7 +22,7 @@ const ContactList = () => {
             <li key={id}>
                 <p>{name}: {number}</p>
                 
-            <button onClick={handleDelete}>delete</button>
+            <button onClick={() =>{dispatch(deleteContacts(id))} }>delete</button>
           </li>
         )
         })}
