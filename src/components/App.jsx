@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Notiflix from 'notiflix';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
