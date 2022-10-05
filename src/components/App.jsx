@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Notiflix from 'notiflix';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
@@ -9,7 +8,7 @@ import {createContacts} from '../redux/contactsSlice'
 
 
 function App() {
-  const [filter, setFilter] = useState('')
+  // const [filter, setFilter] = useState('')
 
 
   // const [contacts, setContacts] = useState(
@@ -52,21 +51,21 @@ function App() {
   
   ///-----------------------------///
   
-  const changeFilter = event => setFilter(event.target.value );
+  // const changeFilter = event => setFilter(event.target.value );
 
-  const filterContact = () => {
-    if (filter === '') {
-      return contacts;
-    } else {
-      // const { contacts, filter } = this.state;
+  // const filterContact = () => {
+  //   if (filter === '') {
+  //     return contacts;
+  //   } else {
+  //     const { contacts, filter } = this.state;
 
-      const normalizedFilter = filter.toLowerCase();
+  //     const normalizedFilter = filter.toLowerCase();
 
-      return contacts.filter(contact =>
-        contact.name.toLowerCase().includes(normalizedFilter)
-      );
-    }
-  }
+  //     return contacts.filter(contact =>
+  //       contact.name.toLowerCase().includes(normalizedFilter)
+  //     );
+  //   }
+  // }
 
       return (
         <div style={{
@@ -81,13 +80,13 @@ function App() {
             handleSubmit={handleSubmit}
           />
           <h2>Contacts</h2>
-          <Filter filterContact={changeFilter} />
+          <Filter  /> 
           <ContactList
-            contactsList={filterContact}
+            // contactsList={filterContact}
             // deleteContact={deleteContact}
           />
         </div>
       );
 }
-    
+    // filterContact={changeFilter}
 export default App;
